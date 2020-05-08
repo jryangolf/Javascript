@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<header>
+    
+</header>
+    <style>
+        body {
+            background-color: #AFEEEE;
+        }
+    </style>
+<body>
+
+    <h1><strong>Joseph gets his butt kicked by javascript and marco makes fun of him</strong></h1>
+     
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    
+    <script>
+        function linearsearch(value, list) {
+            var found = false;
+            var postion = "not found";
+            var index = 0;
+
+        while(!found && index < list.length) {
+            if(list[index] == value) {
+                found = true;
+                position = index;
+            }   
+            else {
+                index += 1;
+            }
+            return postion;
+            }
+        }
+        function init(){
+        var domlist = document.getElementById("list");
+            if(domlist == null) {
+                alert("error")
+                return;
+            }
+        var domlis = domlist.children;
+        var list = [];
+        var i = 0
+
+        while(i < domlis.length) {
+            list.push(parseInt(domlis[i].innertext));
+
+            i++
+        }
+
+            alert(linearsearch(3, "list"));
+            alert(linearsearch(4, "list"));
+        }
+        init();
+    </script>
+    
+</body>
+</html>
