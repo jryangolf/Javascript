@@ -35,9 +35,11 @@
             else {
                 index += 1;
             }
-            return postion;
+            
             }
+            return postion;
         }
+
         function init(){
         var domlist = document.getElementById("list");
             if(domlist == null) {
@@ -48,14 +50,13 @@
         var list = [];
         var i = 0
 
-        while(i < domlis.length) {
+        for (i < list.children.length; i++) {
             list.push(parseInt(domlis[i].innertext));
 
-            i++
         }
 
-            alert(linearsearch(3, "list"));
-            alert(linearsearch(4, "list"));
+            alert(linearsearch(3, list));
+            alert(linearsearch(4, list));
         }
         init();
     </script>
