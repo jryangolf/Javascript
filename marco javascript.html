@@ -22,6 +22,25 @@
     </ul>
     
     <script>
+
+    function init(){
+        var domlist = document.getElementById("list");
+            if(domlist == null) {
+                alert("error")
+                return;
+            }
+        var domlis = domlist.children;
+        var list = [];
+        var i 
+
+        for (i = 0; i < domlis.length; i++ ) {
+            list.push(parseInt(domlis[i].innertext));
+
+        }
+            return list 
+        }
+        init();
+
         function linearsearch(value, list) {
             var found = false;
             var postion = "not found";
@@ -39,26 +58,9 @@
             }
             return postion;
         }
+        alert(linearsearch(3, list));
+        alert(linearsearch(4, list));
 
-        function init(){
-        var domlist = document.getElementById("list");
-            if(domlist == null) {
-                alert("error")
-                return;
-            }
-        var domlis = domlist.children;
-        var list = [];
-        var i = 0
-
-        for (i < list.children.length; i++) {
-            list.push(parseInt(domlis[i].innertext));
-
-        }
-
-            alert(linearsearch(3, list));
-            alert(linearsearch(4, list));
-        }
-        init();
     </script>
     
 </body>
