@@ -22,45 +22,51 @@
     </ul>
     
     <script>
-
-    function init(){
-        var domlist = document.getElementById("list");
-            if(domlist == null) {
-                alert("error")
-                return;
-            }
-        var domlis = domlist.children;
-        var list = [];
-        var i 
-
-        for (i = 0; i < domlis.length; i++ ) {
-            list.push(parseInt(domlis[i].innertext));
-
-        }
-            return list 
-        }
-        init();
-
         function linearsearch(value, list) {
             var found = false;
-            var postion = "not found";
+            var position = "not found";
             var index = 0;
 
         while(!found && index < list.length) {
             if(list[index] == value) {
                 found = true;
                 position = index;
-            }   
+            }  
             else {
-                index += 1;
+
+                index += 1
             }
             
             }
-            return postion;
-        }
-        alert(linearsearch(3, list));
-        alert(linearsearch(4, list));
 
+            return position;
+        }
+        
+        function init(){
+            var domlist = document.getElementById("list");
+                if(domlist == null) {
+                    alert("error")
+                        return;
+            }
+            var domlis = domlist.children;
+            var list = [];
+
+        for (i = 0; i < domlis.length; i++ ) {
+            list.push(parseInt(domlis[i].innerText));
+
+            }
+        var result1 = linearsearch(3, list);
+            if (result1 != "not found") {
+                domlis[result1].style.backgroundColor = 'green';
+            }
+
+
+        var result2 = linearsearch(4, list);
+            if (result2 != "not found") {
+                domlis[result2].style.backgroundColor = 'black';
+            }
+        }
+        init();
     </script>
     
 </body>
