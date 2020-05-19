@@ -8,7 +8,7 @@ function merge_sort(array) {
         var left = array.slice(0, middle);
         var right = array.slice(middle);
 
-        return merge_sort(merge_sort(left), merge_sort(right));
+        return merge(merge_sort(left), merge_sort(right));
 }
 
 function merge(left, right) {
