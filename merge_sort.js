@@ -1,12 +1,12 @@
 function merge_sort(array) {
     var sorted_arr = [];
-    if (sorted_arr.length < 2) {
+    if (array.length < 2) {
         return array;
     }
-        var length = sorted_arr.length;
+        var length = array.length;
         var middle = Math.floor(length / 2);
-        var left = sorted_arr.slice(0, middle);
-        var right = sorted_arr.slice(middle);
+        var left = array.slice(0, middle);
+        var right = array.slice(middle);
 
         return merge_sort(merge_sort(left), merge_sort(right));
 }
