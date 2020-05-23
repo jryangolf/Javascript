@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<header>
+
+</header>
+<style>
+    body {
+        background-color: rgb(134, 128, 43);
+    }
+</style>
+<Body>
+
+    <h1><strong>Towers of hanoi</strong></h1>
+        
+    <p id="A"></p>
+    <p id="B"></p>
+    <p id="C"></p>
+    
+    
+    
+    
+</Body>
+
+<script>
+var arrayA = [1,2,3,4,5];
+var arrayB = [];
+var arrayC = [];
+//goal is to put all of arrayA into arrayB using push and pop.
+//cannot put bigger numbers on top of smaller numbers. 
+//cannot use google to search for help. 
+//first code it linearly then use recursion.
+
+
+document.getElementById("A").innerHTML = arrayA.join(" , ");
+arrayA.shift();
+arrayB.unshift("1");
+
+arrayA.shift();
+arrayC.unshift("2");
+
+arrayB.shift();
+arrayC.unshift("1");
+
+arrayA.shift();
+arrayB.unshift("3");
+
+arrayC.shift();
+arrayA.unshift("1");
+
+arrayC.shift();
+arrayB.unshift("2");
+
+arrayA.shift();
+arrayB.unshift("1");
+
+arrayA.shift();
+arrayC.unshift("4");
+
+arrayB.shift();
+arrayA.unshift("1");
+
+arrayB.shift();
+arrayA.unshift("2");
+
+arrayA.shift();
+arrayC.unshift("1");
+
+arrayB.shift();
+arrayA.unshift("3");
+
+arrayC.shift();
+arrayB.unshift("1");
+
+arrayC.shift();
+arrayA.unshift("2");
+
+arrayB.shift();
+arrayC.unshift("1");
+
+arrayA.shift();
+arrayB.unshift("2");
+
+arrayC.shift();
+arrayB.unshift("1");
+
+arrayA.shift();
+arrayC.unshift("3");
+
+arrayB.shift();
+arrayA.unshift("1");
+
+arrayB.shift();
+arrayC.unshift("2");
+
+arrayA.shift();
+arrayC.unshift("1");
+
+arrayA.shift();
+arrayB.unshift("5");
+
+arrayC.shift();
+arrayB.unshift("1");
+
+arrayC.shift();
+arrayA.unshift("2");
+
+arrayB.shift();
+arrayC.unshift("1");
+
+arrayA.shift();
+arrayB.unshift("2");
+
+arrayC.shift();
+arrayB.unshift("1");
+
+arrayC.shift();
+arrayA.unshift("3");
+
+arrayB.shift();
+arrayC.unshift("1");
+
+arrayB.shift();
+arrayA.unshift("2");
+
+arrayC.shift();
+arrayA.unshift("1");
+
+arrayC.shift();
+arrayB.unshift("4");
+
+arrayA.shift();
+arrayB.unshift("1");
+
+arrayA.shift();
+arrayC.unshift("2");
+
+arrayB.shift();
+arrayC.unshift("1");
+
+arrayA.shift();
+arrayB.unshift("3");
+
+arrayC.shift();
+arrayA.unshift("1");
+
+arrayC.shift();
+arrayB.unshift("2");
+
+arrayA.shift();
+arrayB.unshift("1");
+
+
+ document.getElementById("B").innerHTML = arrayB.join(" , ");
+document.getElementById("C").innerHTML = arrayC.join(" , ");
+</script>
+
+</html>

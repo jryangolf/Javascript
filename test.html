@@ -21,13 +21,21 @@
         <li>4</li>
     </ul>
     
-   <p id = "newlist"></p>
+   <ul id = "newlist"></ul>
 	
-    <script type="text/javascript" src="merge_sort.js">
+    <script type="text/javascript" src="merge_sort.js"></script>
+    
+    <script type="text/javascript">
        
-       document.getElementById("newlist").innerHTML = results;
-
-   
+        var newlist = document.getElementById("newlist");
+        while (results.length) {
+            var value = results.pop();
+            var element = document.createElement("li");
+            element.innerHTML = value;
+            newlist.prepend(element);
+            
+        }
+    
     </script>
     
 </body>

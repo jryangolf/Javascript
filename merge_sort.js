@@ -1,14 +1,16 @@
 function merge_sort(array) {
-    var sorted_arr = [];
     if (array.length < 2) {
         return array;
     }
-        var length = array.length;
-        var middle = Math.floor(length / 2);
-        var left = array.slice(0, middle);
-        var right = array.slice(middle);
+    var length = array.length;
+    var middle = Math.floor(length / 2);
+    var left = array.slice(0, middle);
+    var right = array.slice(middle);
 
-        return merge(merge_sort(left), merge_sort(right));
+    var mergeSortLeftResult = merge_sort(left);
+    var mergeSortRightResult = merge_sort(right);
+    var sortedArray = merge(mergeSortLeftResult, mergeSortRightResult);
+    return sortedArray; 
 }
 
 function merge(left, right) {
@@ -20,8 +22,10 @@ function merge(left, right) {
         else {
             results.push(right.shift());
         }
-        results.concat(left, right);
+    
     }
+    results = results.concat(left, right);
+    return results;
 }
 
 function init(){
@@ -40,4 +44,4 @@ for (i = 0; i < domlis.length; i++ ) {
     return merge_sort(list);
 
 }
-init();
+var results = init();
