@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<header>
+
+</header>
+<style>
+    body {
+        background-color: rgb(134, 128, 43);
+    }
+</style>
+<Body>
+
+    <h1><strong>Towers of hanoi</strong></h1>
+        
+    <p id="A"></p>
+    <p id="B"></p>
+    <p id="C"></p>
+    
+    
+    
+    
+</Body>
+
+<script>
+var arrayA = [1,2,3,4,5];
+var arrayB = [];
+var arrayC = [];
+//goal is to put all of arrayA into arrayB using recursion.
+//cannot put bigger numbers on top of smaller numbers. 
+//cannot use google to search for help. 
+var towersOfHanoi = function(numOfDisks, fromArray, toArray, extraArray) {
+    //create an exit for recursion
+    if (numOfDisks > 1) {
+       
+    towersOfHanoi(numOfDisks-1, fromArray, extraArray, toArray)
+    console.log(numOfDisks, fromArray, toArray);
+    towersOfHanoi(numOfDisks-1, extraArray, fromArray, toArray);
+    }
+
+    return;
+}
+
+towersOfHanoi(3, arrayA, arrayB, arrayC);
+
+
+document.getElementById("B").innerHTML = arrayB.join(" , ");
+
+</script>
+
+</html>
